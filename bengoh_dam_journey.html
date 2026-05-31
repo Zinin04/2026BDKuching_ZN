@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengoh Dam | The Jurassic World of Sarawak by @zinininc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-dark: #051008;
+            --forest-mid: #0a180d;
+            --sarawak-yellow: #facc15; 
+            --sarawak-dark-red: #991b1b; 
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--forest-dark);
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* 砂拉越深紅色強調文字特效 */
+        .sarawak-highlight {
+            color: var(--sarawak-dark-red);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 15px rgba(153, 27, 27, 0.4);
+        }
+
+        /* 滾動淡入動畫 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 媒體畫框特效 - 強制填滿修正版 */
+        .media-frame {
+            position: relative; /* 關鍵修正：讓內部元素有定位基準 */
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(250, 204, 21, 0.15);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8);
+            background-color: var(--forest-mid); /* 載入前的綠色底色 */
+            transition: transform 0.5s ease, border-color 0.5s ease;
+        }
+        .media-frame:hover {
+            transform: scale(1.02);
+            border-color: rgba(250, 204, 21, 0.4);
+        }
+        /* 關鍵修正：強制影片與圖片絕對定位並填滿畫框 */
+        .media-frame video, .media-frame img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 自定義滾動條 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--forest-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d4a22;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--sarawak-yellow);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-yellow-500 selection:text-black">
+
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-black/60 backdrop-blur-md py-4 px-6 md:px-12 flex justify-between items-center border-b border-yellow-500/20">
+        <div class="text-xl serif font-bold tracking-widest text-white">
+            BENGOH <span class="text-yellow-400 italic">2026</span>
+        </div>
+        <a href="https://instagram.com/zinininc" target="_blank" class="text-sm font-medium tracking-wider text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+            @zinininc
+        </a>
+    </nav>
+
+    <!-- 英雄區域 (Hero Section) -->
+    <section class="min-h-screen pt-28 pb-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col justify-center">
+        <div class="text-center reveal mb-12">
+            <p class="text-yellow-400 uppercase tracking-[0.3em] text-sm md:text-base mb-4 font-semibold">
+                Borneo, Malaysia
+            </p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
+                The Jurassic World<br>
+                <span class="italic text-gray-300 text-4xl md:text-6xl">of </span> 
+                <span class="serif sarawak-highlight text-6xl md:text-8xl">SARAWAK</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed mt-4">
+                A visual journey into the deep wild forest. Seen through the eyes of a traveler looking for true nature.
+            </p>
+        </div>
+        
+        <!-- 首頁乘船影片 -->
+        <div class="reveal w-full max-w-5xl mx-auto h-[40vh] md:h-[60vh] media-frame">
+            <video src="boat_4.mp4" autoplay loop muted playsinline></video>
+        </div>
+    </section>
+
+    <!-- 簡介區域 (The Gateway) -->
+    <section class="py-24 bg-gradient-to-b from-[var(--forest-dark)] to-[var(--forest-mid)] border-t border-yellow-900/20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-[2px] w-12 bg-yellow-400"></div>
+                    <h2 class="text-yellow-400 text-sm tracking-[0.2em] uppercase font-bold">The Gateway</h2>
+                </div>
+                <h3 class="text-4xl md:text-5xl serif text-white mb-6 leading-tight">Leaving the City of Cats</h3>
+                <p class="text-gray-300 leading-relaxed mb-6 font-light text-lg">
+                    Kuching is the vibrant capital city of Sarawak, Malaysia. Known for its rich history, charming old streets, and iconic dishes like Sarawak Laksa, it is a place where modern city life blends with local culture and heritage.
+                </p>
+                <p class="text-gray-300 leading-relaxed font-light text-lg">
+                    But the real adventure begins beyond the city. About an hour from Kuching lies Padawan, home to Bengoh Dam. Originally built to supply water to the growing city, the dam also created a stunning reservoir surrounded by lush rainforest and towering mountains. The landscape feels almost prehistoric, like a hidden world untouched by time. This is where our journey begins—a peaceful boat ride across emerald-green waters into one of Sarawak's most beautiful natural escapes.
+                </p>
+            </div>
+            
+            <div class="reveal grid grid-cols-2 gap-4 h-[500px]">
+                <div class="media-frame h-full transform translate-y-8">
+                    <img src="1.jpeg" alt="Explorer Profile">
+                </div>
+                <div class="media-frame h-full">
+                    <img src="2.jpeg" alt="Explorer Portrait">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主題 1: 水 (Theme 01) -->
+    <section class="py-24 bg-[var(--forest-dark)] border-t border-yellow-900/20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-yellow-400 text-sm tracking-[0.2em] uppercase font-bold mb-4">Theme 01</h2>
+                <h3 class="text-5xl md:text-6xl serif text-white mb-6">The Power of Water</h3>
+                <div class="h-[2px] w-24 bg-yellow-400 mx-auto opacity-50"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                <div class="lg:col-span-5 reveal bg-black/40 p-8 rounded-2xl border border-yellow-500/10 shadow-2xl">
+                    <p class="text-gray-300 leading-relaxed font-light mb-6 text-lg">
+                        Walking deeper into the jungle, you will hear a loud noise. Soon, you find the beautiful Susung and Kling waterfalls. The sound of the falling water is so strong that you forget everything else.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed font-light text-lg mb-8">
+                        Standing in front of these giant waterfalls, you can feel the cool water on your face. You look around at the big rocks covered in green moss. It makes you feel very small, but also very happy to see how amazing nature is.
+                    </p>
+                    <!-- 遠景瀑布影片 -->
+                    <div class="media-frame h-48 w-full">
+                        <video src="water_4.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 h-[600px] reveal">
+                    <div class="media-frame h-full">
+                        <img src="3.jpeg" alt="Waterfall embrace">
+                    </div>
+                    <div class="media-frame h-full sm:mt-12">
+                        <!-- 自拍影片 -->
+                        <video src="me_4.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主題 2: 樹木 (Theme 02) -->
+    <section class="py-24 bg-[var(--forest-mid)] border-t border-yellow-900/20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col lg:flex-row-reverse gap-16 items-start">
+                
+                <div class="w-full lg:w-5/12 reveal">
+                    <div class="flex items-center justify-end gap-4 mb-4">
+                        <h2 class="text-yellow-400 text-sm tracking-[0.2em] uppercase font-bold">Theme 02</h2>
+                        <div class="h-[2px] w-12 bg-yellow-400"></div>
+                    </div>
+                    <h3 class="text-5xl md:text-6xl serif text-white mb-6 text-right">The Giant Trees</h3>
+                    <div class="bg-black/40 p-8 rounded-2xl border border-yellow-500/10 shadow-2xl">
+                        <p class="text-gray-300 font-light leading-relaxed mb-6 text-lg">
+                            Walking into this forest feels like stepping back in time. Giant trees and towering ferns rise above you, filtering the sunlight through layers of green. The rainforest feels ancient, mysterious, and almost untouched.
+                        </p>
+                        <p class="text-gray-300 font-light leading-relaxed text-lg mb-8">
+                            To cross the rivers, you walk across bamboo bridges built by the local Bidayuh community. Made from materials gathered from the surrounding forest, these simple yet remarkable structures have connected people to the land for generations. With every step on the bamboo, you feel a deeper connection to the traditions of Borneo and the wilderness that surrounds you.
+                        </p>
+                        <!-- 樹冠影片 -->
+                        <div class="media-frame h-40 w-full">
+                            <video src="tree)_4.mp4" autoplay loop muted playsinline></video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-7/12 grid grid-cols-2 gap-4 h-[600px] reveal">
+                    <div class="media-frame h-full transform -translate-y-6">
+                        <img src="4.jpeg" alt="Bamboo bridge">
+                    </div>
+                    <div class="media-frame h-full mt-12">
+                        <!-- 竹橋自拍影片 (處理了檔名的空格) -->
+                        <video src="Explorer%20portrait_3.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 主題 3: 身心靈 (Theme 03) -->
+    <section class="py-24 bg-[var(--forest-dark)] border-t border-yellow-900/20 px-6">
+        <div class="max-w-5xl mx-auto reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-yellow-400 text-sm tracking-[0.2em] uppercase font-bold mb-4">Theme 03</h2>
+                <h3 class="text-4xl md:text-5xl serif text-white mb-8 italic">Finding Peace</h3>
+                
+                <p class="text-2xl text-gray-200 font-medium leading-relaxed mb-8 serif italic">
+                    "In a world that never stops moving, Bengoh Dam reminds us to slow down."
+                </p>
+                <p class="text-gray-300 font-light leading-relaxed max-w-3xl mx-auto text-lg mb-12">
+                    Beyond the reach of busy streets and constant notifications, the rainforest offers a different rhythm—one shaped by flowing water, ancient trees, and the sounds of nature. The trek may leave your legs tired, but it rewards you with something far more valuable: a moment of peace, a clearer mind, and memories that stay with you long after you leave the forest behind.
+                </p>
+            </div>
+
+            <!-- 結尾平靜水面影片 (處理了檔名的空格) -->
+            <div class="media-frame w-full h-[40vh] md:h-[50vh]">
+                <video src="stop%20boat_4.mp4" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 (Footer) -->
+    <footer class="bg-black py-16 border-t border-yellow-900/30 text-center">
+        <div class="max-w-4xl mx-auto px-6 reveal">
+            <h2 class="text-3xl serif text-white mb-2">BENGOH DAM, KUCHING</h2>
+            <p class="text-yellow-600 text-sm mb-10 tracking-[0.3em] uppercase font-bold">
+                Expedition 2026
+            </p>
+            
+            <div class="inline-block p-[2px] rounded-full bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 mb-6 hover:scale-105 transition-transform duration-500 shadow-[0_0_20px_rgba(250,204,21,0.2)]">
+                <a href="https://instagram.com/zinininc" target="_blank" class="block bg-black hover:bg-gray-950 text-white px-8 py-3 rounded-full font-medium tracking-wide flex items-center gap-3 transition-colors">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    Explore with @zinininc
+                </a>
+            </div>
+            
+            <p class="text-xs text-gray-500 mt-4 font-light">&copy; 2026 @zinininc. Beautiful moments captured in Kuching, <span class="sarawak-highlight font-bold" style="font-size: 1.1em;">Sarawak</span>.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 處理滾動淡入特效
+            const reveals = document.querySelectorAll(".reveal");
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.1, 
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+
+            // 關鍵修復：強制所有影片載入並播放，突破瀏覽器限制
+            const videos = document.querySelectorAll("video");
+            videos.forEach(video => {
+                video.load();
+                video.play().catch(error => {
+                    console.log("自動播放被阻擋，等待使用者互動：", error);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
